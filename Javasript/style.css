@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 1rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --rangeValue: 5;
+}
+
+#board {
+  
+  #boxContainer {
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 300px;
+    min-height: 300px;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(5, auto);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+
+    .box {
+      height: 100%;
+      width: 100%;
+      border: 1px solid black;
+      transition: 0.5s;
+    }
+
+    .checked {
+      background-color: #272837;
+    }
+  }
+}
+
+#tools{
+  display: grid;
+  grid-template-areas: "_range _range _range _range _color";
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  #range{
+    grid-area: _range;
+  }
+
+  #color{
+    height: 2rem;
+    width: 2rem;
+    grid-area: _color;
+  }
+}
